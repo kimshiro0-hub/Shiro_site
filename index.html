@@ -2,21 +2,50 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>누나의 자기소개</title>
+    <title>Shiro의 자기소개</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; text-align: center; padding: 50px; }
-        .profile-img { width: 150px; border-radius: 50%; }
+        body { font-family: sans-serif; line-height: 1.6; text-align: center; padding: 50px; background-color: #fdfdfd; }
+        .profile-img { width: 150px; border-radius: 50%; margin-bottom: 20px; }
         h1 { color: #333; }
-        .links a { margin: 10px; text-decoration: none; color: blue; border: 1px solid blue; padding: 5px 10px; }
+        .intro-text { font-size: 1.1rem; color: #666; margin-bottom: 40px; }
+        
+        /* 둥둥 뜨는 김말이 효과 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .kim-mari-box {
+            background-color: #fff9eb;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 30px;
+            border: 1px dashed #d35400;
+        }
+        .floating-kim {
+            display: inline-block;
+            animation: float 2s ease-in-out infinite;
+            color: #d35400;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 <body>
     <img src="your-photo.jpg" alt="프로필 사진" class="profile-img">
-    <h1>안녕하세요, [누나 김시로]입니다.</h1>
-    <p>하고 싶은 말이나 좌우명을 적어보세요.</p>
-    <div class="links">
-        <a href="https://instagram.com/누나아이디">Instagram</a>
-        <a href="mailto:누나메일">Email</a>
+    <h1>안녕하세요, Shiro입니다! 👋</h1>
+    <p class="intro-text">여기는 저의 소중한 자기소개 페이지예요.</p>
+
+    <hr style="width: 50%; border: 0.5px solid #eee;">
+
+    <div class="kim-mari-box">
+        <p style="margin: 0; color: #888;">Shiro가 가장 애정하는 메뉴는?</p>
+        <div class="floating-kim">🍤 바삭바삭 김말이 🍤</div>
+    </div>
+
+    <div class="links" style="margin-top: 40px;">
+        <a href="https://instagram.com/누나아이디" style="text-decoration:none; color:blue; border:1px solid blue; padding:5px 15px; border-radius:5px;">Instagram</a>
     </div>
 </body>
 </html>
