@@ -9,26 +9,44 @@
         h1 { color: #333; }
         .intro-text { font-size: 1.1rem; color: #666; margin-bottom: 40px; }
         
-        /* 둥둥 뜨는 김말이 효과 */
+        /* 둥둥 뜨는 효과 */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
+        }
+        /* 반짝이는 효과 */
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7b2cbf; }
+            to { text-shadow: 0 0 10px #fff, 0 0 20px #9d4edd, 0 0 30px #7b2cbf; }
+        }
+
+        .item-box {
+            background-color: #f3f0ff;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #7b2cbf;
         }
         .kim-mari-box {
             background-color: #fff9eb;
             padding: 20px;
             border-radius: 15px;
             display: inline-block;
-            margin-top: 30px;
+            margin: 10px;
             border: 1px dashed #d35400;
         }
-        .floating-kim {
+        .floating {
             display: inline-block;
             animation: float 2s ease-in-out infinite;
-            color: #d35400;
             font-weight: bold;
             font-size: 1.5rem;
+            white-space: nowrap;
+        }
+        .jujutsu {
+            color: #5a189a;
+            animation: glow 1.5s ease-in-out infinite alternate, float 3s ease-in-out infinite;
         }
     </style>
 </head>
@@ -37,11 +55,18 @@
     <h1>안녕하세요, Shiro입니다! 👋</h1>
     <p class="intro-text">여기는 저의 소중한 자기소개 페이지예요.</p>
 
-    <hr style="width: 50%; border: 0.5px solid #eee;">
+    <hr style="width: 50%; border: 0.5px solid #eee; margin-bottom: 30px;">
 
     <div class="kim-mari-box">
-        <p style="margin: 0; color: #888;">Shiro가 가장 애정하는 메뉴는?</p>
-        <div class="floating-kim">🍤 바삭바삭 김말이 🍤</div>
+        <p style="margin: 0; color: #888;">최애 음식</p>
+        <div class="floating" style="color: #d35400;">🍤 바삭바삭 김말이 🍤</div>
+    </div>
+
+    <br>
+
+    <div class="item-box">
+        <p style="margin: 0; color: #888;">최애 애니메이션</p>
+        <div class="floating jujutsu">🤞 주술회전 🤞</div>
     </div>
 
     <div class="links" style="margin-top: 40px;">
