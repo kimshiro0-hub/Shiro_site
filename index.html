@@ -20,6 +20,10 @@
         .hobby-emoji { font-size: 1.8rem; display: block; margin-bottom: 8px; }
         .hobby-name { font-size: 0.85rem; font-weight: bold; color: #555; white-space: nowrap; }
 
+        /* 🎵 음악 섹션 스타일 */
+        .music-section { background-color: #f0f7ff; padding: 30px 20px; margin-top: 30px; border-radius: 20px; border: 1px solid #d0e7ff; }
+        audio { width: 100%; max-width: 300px; margin-top: 10px; }
+
         .sns-section { padding: 30px 20px; margin-top: 20px; border-radius: 20px; border: 1px solid #eee; }
         .youtube-btn { display: inline-block; background-color: #ff0000; color: white; text-decoration: none; padding: 12px 25px; border-radius: 30px; font-weight: bold; margin: 10px 5px; font-size: 0.9rem; }
         .twitter-btn { display: inline-block; background-color: #000; color: white; text-decoration: none; padding: 12px 25px; border-radius: 30px; font-weight: bold; margin: 10px 5px; font-size: 0.9rem; }
@@ -49,6 +53,15 @@
     <div class="favorite-box">
         <div class="floating" style="color: #d35400; margin-bottom: 10px;">🍤 김말이 좋아 🍤</div><br>
         <div class="floating jujutsu">🤞 주술회전 🤞</div>
+    </div>
+
+    <div class="music-section">
+        <h2 style="font-size: 1.2rem; margin-bottom: 5px; color: #007bff;">My Original Music</h2>
+        <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;">제가 직접 제작한 AI 음악을 감상해보세요.</p>
+        <audio controls>
+            <source src="music.mp3" type="audio/mpeg">
+            브라우저가 오디오 태그를 지원하지 않습니다.
+        </audio>
     </div>
 
     <div class="sns-section">
