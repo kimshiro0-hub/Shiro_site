@@ -2,52 +2,38 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiro의 자기소개</title>
     <style>
-        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; text-align: center; padding: 50px 20px; background-color: #fdfdfd; color: #333; }
-        .profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { font-size: 1.8rem; margin-bottom: 10px; }
-        .intro-text { font-size: 1rem; color: #666; margin-bottom: 30px; }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; text-align: center; padding: 30px 10px; background-color: #fdfdfd; color: #333; margin: 0; }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { font-size: 1.6rem; margin-bottom: 5px; }
+        .intro-text { font-size: 0.95rem; color: #666; margin-bottom: 25px; padding: 0 20px; }
         
-        /* 애니메이션 효과 */
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        /* 애니메이션 */
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
         @keyframes glow { from { text-shadow: 0 0 5px #fff, 0 0 10px #9d4edd; } to { text-shadow: 0 0 15px #fff, 0 0 25px #7b2cbf; } }
 
-        /* 취미 카드 스타일 */
-        .section-title { font-size: 1.4rem; margin-top: 40px; color: #444; border-bottom: 2px solid #eee; display: inline-block; padding-bottom: 5px; }
-        .hobby-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
-        .hobby-card { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); width: 140px; border: 1px solid #f0f0f0; transition: 0.3s; }
-        .hobby-card:hover { transform: scale(1.05); }
-        .hobby-emoji { font-size: 1.5rem; display: block; margin-bottom: 5px; }
-        .hobby-name { font-size: 0.9rem; font-weight: bold; color: #555; }
+        /* 🔥 가로 슬라이드 컨테이너 */
+        .section-title { font-size: 1.3rem; margin-top: 30px; color: #444; }
+        .hobby-slider { 
+            display: flex; 
+            overflow-x: auto; /* 옆으로 넘기기 가능하게 */
+            scroll-snap-type: x mandatory; /* 스냅 효과 */
+            gap: 15px; 
+            padding: 10px 20px 20px;
+            -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 */
+        }
+        .hobby-slider::-webkit-scrollbar { display: none; } /* 스크롤바 숨기기 */
 
-        /* 강조 효과 섹션 */
-        .favorite-box { margin-top: 30px; }
-        .floating { display: inline-block; animation: float 2.5s ease-in-out infinite; font-weight: bold; }
-        .jujutsu { color: #5a189a; animation: glow 1.5s ease-in-out infinite alternate; }
-    </style>
-</head>
-<body>
-    <img src="1767893046395.jpg" alt="Shiro" class="profile-img">
-    <h1>안녕하세요, Shiro입니다! 👋</h1>
-    <p class="intro-text">AI와 언어, 그리고 맛있는 것을 사랑하는 제작자의 공간입니다.</p>
-
-    <h2 class="section-title">My Hobbies</h2>
-    <div class="hobby-container">
-        <div class="hobby-card"><span class="hobby-emoji">🇯🇵</span><span class="hobby-name">듀오링고<br>Lv.22</span></div>
-        <div class="hobby-card"><span class="hobby-emoji">💻</span><span class="hobby-name">바이브<br>코딩</span></div>
-        <div class="hobby-card"><span class="hobby-emoji">🎨</span><span class="hobby-name">AI 에셋<br>제작</span></div>
-        <div class="hobby-card"><span class="hobby-emoji">🎵</span><span class="hobby-name">AI 노래<br>제작</span></div>
-        <div class="hobby-card"><span class="hobby-emoji">🎬</span><span class="hobby-name">AI 영상<br>제작</span></div>
-    </div>
-
-    <div class="favorite-box">
-        <div class="floating" style="color: #d35400; margin-right: 15px;">🍤 김말이 좋아 🍤</div>
-        <div class="floating jujutsu">🤞 주술회전 🤞</div>
-    </div>
-
-    <div style="margin-top: 50px;">
-        <a href="https://instagram.com/누나아이디" style="text-decoration:none; color:#e1306c; font-weight:bold; border:1px solid #e1306c; padding:8px 20px; border-radius:20px;">Instagram</a>
-    </div>
-</body>
-</html>
+        .hobby-card { 
+            flex: 0 0 120px; /* 카드 너비 고정 */
+            scroll-snap-align: center;
+            background: white; 
+            padding: 20px 10px; 
+            border-radius: 15px; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08); 
+            border: 1px solid #f0f0f0; 
+        }
+        .hobby-emoji { font-size: 1.8rem; display: block; margin-bottom: 8px; }
+        .hobby-name { font-size: 0.85
