@@ -14,29 +14,17 @@
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
         @keyframes glow { from { text-shadow: 0 0 5px #fff, 0 0 10px #9d4edd; } to { text-shadow: 0 0 15px #fff, 0 0 25px #7b2cbf; } }
 
-        /* 🔥 가로 슬라이드 컨테이너 */
+        /* 취미 슬라이더 */
         .section-title { font-size: 1.3rem; margin-top: 30px; color: #444; }
-        .hobby-slider { 
-            display: flex; 
-            overflow-x: auto; /* 옆으로 넘기기 가능하게 */
-            scroll-snap-type: x mandatory; /* 스냅 효과 */
-            gap: 15px; 
-            padding: 10px 20px 20px;
-            -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 */
-        }
-        .hobby-slider::-webkit-scrollbar { display: none; } /* 스크롤바 숨기기 */
-
-        .hobby-card { 
-            flex: 0 0 120px; /* 카드 너비 고정 */
-            scroll-snap-align: center;
-            background: white; 
-            padding: 20px 10px; 
-            border-radius: 15px; 
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08); 
-            border: 1px solid #f0f0f0; 
-        }
+        .hobby-slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 20px 20px; -webkit-overflow-scrolling: touch; }
+        .hobby-slider::-webkit-scrollbar { display: none; }
+        .hobby-card { flex: 0 0 120px; scroll-snap-align: center; background: white; padding: 20px 10px; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
         .hobby-emoji { font-size: 1.8rem; display: block; margin-bottom: 8px; }
         .hobby-name { font-size: 0.85rem; font-weight: bold; color: #555; white-space: nowrap; }
+
+        /* 컨텍 정보 섹션 */
+        .contact-section { background-color: #f8f9fa; padding: 30px 20px; margin-top: 40px; border-top: 1px solid #eee; }
+        .email-link { display: inline-block; background-color: #333; color: white; text-decoration: none; padding: 12px 25px; border-radius: 30px; font-weight: bold; margin-top: 10px; font-size: 0.9rem; }
 
         .favorite-box { margin-top: 20px; padding: 20px; }
         .floating { display: inline-block; animation: float 2.5s ease-in-out infinite; font-weight: bold; }
@@ -48,7 +36,7 @@
     <h1>안녕하세요, Shiro입니다! 👋</h1>
     <p class="intro-text">AI 마스터이자 언어 학습을 즐기는<br>제작자 Shiro의 공간입니다.</p>
 
-    <h2 class="section-title">My Hobbies 👈(Swipe!)</h2>
+    <h2 class="section-title">My Hobbies 👈</h2>
     <div class="hobby-slider">
         <div class="hobby-card"><span class="hobby-emoji">🇯🇵</span><span class="hobby-name">듀오링고 Lv.22</span></div>
         <div class="hobby-card"><span class="hobby-emoji">💻</span><span class="hobby-name">바이브 코딩</span></div>
@@ -62,7 +50,13 @@
         <div class="floating jujutsu">🤞 주술회전 🤞</div>
     </div>
 
-    <div style="margin-top: 30px; margin-bottom: 50px;">
+    <div class="contact-section">
+        <h2 style="font-size: 1.2rem; margin-bottom: 5px;">Contact</h2>
+        <p style="font-size: 0.9rem; color: #777; margin-bottom: 15px;">비즈니스 협업 문의는 아래 메일로 연락주세요.</p>
+        <a href="mailto:kimshiro0328@gmail.com" class="email-link">📩 kimshiro0328@gmail.com</a>
+    </div>
+
+    <div style="margin-top: 40px; margin-bottom: 50px;">
         <a href="https://instagram.com/누나아이디" style="text-decoration:none; color:#e1306c; font-weight:bold; border:2px solid #e1306c; padding:10px 30px; border-radius:25px;">Instagram</a>
     </div>
 </body>
