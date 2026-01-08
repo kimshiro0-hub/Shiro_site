@@ -14,15 +14,18 @@
         @keyframes glow { from { text-shadow: 0 0 5px #fff, 0 0 10px #9d4edd; } to { text-shadow: 0 0 15px #fff, 0 0 25px #7b2cbf; } }
 
         .section-title { font-size: 1.3rem; margin-top: 30px; color: #444; }
-        .hobby-slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 20px 20px; -webkit-overflow-scrolling: touch; }
-        .hobby-slider::-webkit-scrollbar { display: none; }
+        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 20px 20px; -webkit-overflow-scrolling: touch; }
+        .slider-container::-webkit-scrollbar { display: none; }
+        
+        /* 취미 카드 스타일 */
         .hobby-card { flex: 0 0 120px; scroll-snap-align: center; background: white; padding: 20px 10px; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
         .hobby-emoji { font-size: 1.8rem; display: block; margin-bottom: 8px; }
         .hobby-name { font-size: 0.85rem; font-weight: bold; color: #555; white-space: nowrap; }
 
-        /* 🎵 음악 섹션 스타일 */
-        .music-section { background-color: #f0f7ff; padding: 30px 20px; margin-top: 30px; border-radius: 20px; border: 1px solid #d0e7ff; }
-        audio { width: 100%; max-width: 300px; margin-top: 10px; }
+        /* 📺 유튜브 플레이리스트 스타일 */
+        .video-card { flex: 0 0 280px; scroll-snap-align: center; border-radius: 15px; overflow: hidden; background: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
         .sns-section { padding: 30px 20px; margin-top: 20px; border-radius: 20px; border: 1px solid #eee; }
         .youtube-btn { display: inline-block; background-color: #ff0000; color: white; text-decoration: none; padding: 12px 25px; border-radius: 30px; font-weight: bold; margin: 10px 5px; font-size: 0.9rem; }
@@ -42,7 +45,7 @@
     <p class="intro-text">AI 마스터이자 언어 학습을 즐기는<br>제작자 Shiro의 공간입니다.</p>
 
     <h2 class="section-title">My Hobbies 👈</h2>
-    <div class="hobby-slider">
+    <div class="slider-container">
         <div class="hobby-card"><span class="hobby-emoji">🇯🇵</span><span class="hobby-name">듀오링고 Lv.22</span></div>
         <div class="hobby-card"><span class="hobby-emoji">💻</span><span class="hobby-name">바이브 코딩</span></div>
         <div class="hobby-card"><span class="hobby-emoji">🎨</span><span class="hobby-name">AI 에셋 제작</span></div>
@@ -50,18 +53,23 @@
         <div class="hobby-card"><span class="hobby-emoji">🎬</span><span class="hobby-name">AI 영상 제작</span></div>
     </div>
 
+    <h2 class="section-title">My Music Playlist 🎧</h2>
+    <div class="slider-container">
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/8H5mkeBY1xErW2gL" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://youtu.be/2hYxsNDHwoA?si=V3NGUln54SaJIS-O" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <div class="favorite-box">
         <div class="floating" style="color: #d35400; margin-bottom: 10px;">🍤 김말이 좋아 🍤</div><br>
         <div class="floating jujutsu">🤞 주술회전 🤞</div>
-    </div>
-
-    <div class="music-section">
-        <h2 style="font-size: 1.2rem; margin-bottom: 5px; color: #007bff;">My Original Music</h2>
-        <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;">제가 직접 제작한 AI 음악을 감상해보세요.</p>
-        <audio controls>
-            <source src="music.mp3" type="audio/mpeg">
-            브라우저가 오디오 태그를 지원하지 않습니다.
-        </audio>
     </div>
 
     <div class="sns-section">
