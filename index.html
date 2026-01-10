@@ -17,13 +17,14 @@
         .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 20px 20px; -webkit-overflow-scrolling: touch; }
         .slider-container::-webkit-scrollbar { display: none; }
         
-        /* 취미 카드 스타일 */
         .hobby-card { flex: 0 0 120px; scroll-snap-align: center; background: white; padding: 20px 10px; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
         .hobby-emoji { font-size: 1.8rem; display: block; margin-bottom: 8px; }
         .hobby-name { font-size: 0.85rem; font-weight: bold; color: #555; white-space: nowrap; }
 
-        /* 📺 유튜브 플레이리스트 스타일 */
-        .video-card { flex: 0 0 280px; scroll-snap-align: center; border-radius: 15px; overflow: hidden; background: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .tech-stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 0 20px; margin-top: 15px; }
+        .tech-tag { background: #f0f0f0; color: #555; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid #e0e0e0; }
+
+        .video-card { flex: 0 0 300px; scroll-snap-align: center; border-radius: 15px; overflow: hidden; background: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
@@ -42,7 +43,7 @@
 <body>
     <img src="1767893046395.jpg" alt="Shiro" class="profile-img">
     <h1>안녕하세요, Shiro입니다! 👋</h1>
-    <p class="intro-text">AI 마스터이자 언어 학습을 즐기는<br>제작자 Shiro의 공간입니다.</p>
+    <p class="intro-text">AI 마스터이자 언어 학습을 즐기는 제작자 Shiro의 공간입니다.</p>
 
     <h2 class="section-title">My Hobbies 👈</h2>
     <div class="slider-container">
@@ -51,6 +52,17 @@
         <div class="hobby-card"><span class="hobby-emoji">🎨</span><span class="hobby-name">AI 에셋 제작</span></div>
         <div class="hobby-card"><span class="hobby-emoji">🎵</span><span class="hobby-name">AI 노래 제작</span></div>
         <div class="hobby-card"><span class="hobby-emoji">🎬</span><span class="hobby-name">AI 영상 제작</span></div>
+    </div>
+
+    <h2 class="section-title">AI Tech Stack 🛠️</h2>
+    <div class="tech-stack">
+        <span class="tech-tag">#Grok</span>
+        <span class="tech-tag">#Gemini</span>
+        <span class="tech-tag">#Suno</span>
+        <span class="tech-tag">#NovelAI</span>
+        <span class="tech-tag">#PikaAI</span>
+        <span class="tech-tag">#ViduAI</span>
+        <span class="tech-tag">#CapCut</span>
     </div>
 
     <h2 class="section-title">My Music Playlist 🎧</h2>
@@ -66,14 +78,6 @@
             </div>
         </div>
     </div>
-<h2 class="section-title">AI Tech Stack 🛠️</h2>
-<p style="font-size: 0.9rem; color: #777;">제가 주로 사용하는 AI 도구들입니다.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px;">
-    <span style="background: #eee; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">#Suno_AI</span>
-    <span style="background: #eee; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">#Midjourney</span>
-    <span style="background: #eee; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">#Vibe_Coding</span>
-    <span style="background: #eee; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">#Stable_Diffusion</span>
-</div>
 
     <div class="favorite-box">
         <div class="floating" style="color: #d35400; margin-bottom: 10px;">🍤 김말이 좋아 🍤</div><br>
@@ -82,13 +86,12 @@
 
     <div class="sns-section">
         <h2 style="font-size: 1.2rem; margin-bottom: 10px;">Social Media</h2>
-        <a href="https://youtube.com/@spacedustpeace?si=8H5mkeBY1xErW2gL" class="youtube-btn">🎬 YouTube</a>
+        <a href="https://youtube.com/@spacedustpeace" class="youtube-btn">🎬 YouTube</a>
         <a href="https://x.com/shiro18509" class="twitter-btn">𝕏 Twitter</a>
     </div>
 
     <div class="contact-section">
         <h2 style="font-size: 1.2rem; margin-bottom: 5px;">Contact</h2>
-        <p style="font-size: 0.9rem; color: #777; margin-bottom: 15px;">비즈니스 협업 문의는 아래 메일로 연락주세요.</p>
         <a href="mailto:kimshiro0328@gmail.com" class="email-link">📩 kimshiro0328@gmail.com</a>
     </div>
 
