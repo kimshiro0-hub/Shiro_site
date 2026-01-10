@@ -13,13 +13,17 @@
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
         @keyframes glow { from { text-shadow: 0 0 5px #fff, 0 0 10px #9d4edd; } to { text-shadow: 0 0 15px #fff, 0 0 25px #7b2cbf; } }
 
-        .section-title { font-size: 1.3rem; margin-top: 30px; color: #444; }
+        .section-title { font-size: 1.3rem; margin-top: 35px; color: #444; }
         .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px 20px 20px; -webkit-overflow-scrolling: touch; }
         .slider-container::-webkit-scrollbar { display: none; }
         
         .hobby-card { flex: 0 0 120px; scroll-snap-align: center; background: white; padding: 20px 10px; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
         .hobby-emoji { font-size: 1.8rem; display: block; margin-bottom: 8px; }
         .hobby-name { font-size: 0.85rem; font-weight: bold; color: #555; white-space: nowrap; }
+
+        /* ✨ 크리에이티브 스타일 섹션 */
+        .style-box { background: #f9f0ff; border-radius: 20px; padding: 20px; margin: 15px 20px; border: 1px dashed #d1b3ff; }
+        .style-item { display: inline-block; background: white; color: #7b2cbf; padding: 5px 12px; border-radius: 10px; font-size: 0.85rem; font-weight: bold; margin: 3px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         .tech-stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 0 20px; margin-top: 15px; }
         .tech-tag { background: #f0f0f0; color: #555; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid #e0e0e0; }
@@ -44,6 +48,14 @@
     <img src="1767893046395.jpg" alt="Shiro" class="profile-img">
     <h1>안녕하세요, Shiro입니다! 👋</h1>
     <p class="intro-text">AI 마스터이자 언어 학습을 즐기는 제작자 Shiro의 공간입니다.</p>
+
+    <h2 class="section-title">Creative Style 🎨</h2>
+    <div class="style-box">
+        <span class="style-item">사이버펑크</span>
+        <span class="style-item">슬럼</span>
+        <span class="style-item">액션</span>
+        <span class="style-item">카와이 퓨쳐 베이스</span>
+    </div>
 
     <h2 class="section-title">My Hobbies 👈</h2>
     <div class="slider-container">
